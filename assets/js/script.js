@@ -10,4 +10,4 @@ function getApi() {
       console.log(data);
     });
 }
-fetchButton.addEventListener('click', getApi);
+getApi();

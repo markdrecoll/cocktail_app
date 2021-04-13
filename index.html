@@ -19,12 +19,15 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
+
+    <!-- Import jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> 
 
   </head>
 
   <body>
 
+    <!-- Materialize Nav Bar With Dummy Links for now -->
     <nav>
       <div class="nav-wrapper green">
         <a href="#" class="brand-logo">Logo</a>
@@ -36,14 +39,19 @@
       </div>
     </nav>
 
+    <!-- textbox for user to enter ingredient and search button to perform the search -->
+    <input type='text' id='userInputIngredient'></input><button id='ingredientButton'>Search</button>
+
     <table>
         <thead>
           <tr>
               <th>Drink Name</th>
               <th>Picture</th>
+              <th>Details</th>
           </tr>
         </thead>
 
+        <!-- table body for displaying API data retrieved -->
         <tbody id = "drinkTable">
          
         </tbody>

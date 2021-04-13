@@ -1,10 +1,9 @@
 // get the drink table element from the html
 var drinkTableEl = document.getElementById('drinkTable');
 
-
 function getApi(searchTerm) {
   // fetches data from the api, concatenates the user input for the ingredient called
-  var requestUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=' + searchTerm;
+  var requestUrl = 'https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=' + searchTerm;
 
   fetch(requestUrl)
     .then(function (response) {
@@ -38,7 +37,18 @@ $(document).on('click', '#ingredientButton', function(){
   getApi(userInputIngredientEl);
 })
 
-// button that takes drink id and gives more details
-$(document).on('click', '.detail-button' ,function() {
-  console.log('Time to get details for this id', $(this).attr('name'));
-})
+// when clicking a button with class detail-button, call the getDrinkDetailApi function
+$(document).on('click', '.detail-button', getDrinkDetailApi);
+
+// this function takes the drink selection from a button, and gathers that drink's details from the API
+function getDrinkDetailApi(e){
+  var requestUrl = 'https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=' + e.target.name;
+
+  fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    })
+}

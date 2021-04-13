@@ -1,5 +1,7 @@
+var drinkTableRowEl = document.getElementById('drinkTableRow');
+
 function getApi() {
-  var requestUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka';
+  var requestUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin';
 
   fetch(requestUrl)
     .then(function (response) {

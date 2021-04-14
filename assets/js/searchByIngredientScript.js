@@ -40,9 +40,13 @@ function getApi(searchTerm) {
         var tableRow = document.createElement('tr');
 
         // inside that table row, create an <td> and fill it with the data from the API
-        tableRow.innerHTML = `<td> ${data.drinks[i].strDrink} </td> 
-        <td> <img height="200" width="200" src="${data.drinks[i].strDrinkThumb}"</img></td>
-        <td><button class='detail-button btn modal-trigger' data-target="modal1" name='${data.drinks[i].idDrink}'>Instructions</button></td>`;
+        // tableRow.innerHTML = `<td> ${data.drinks[i].strDrink} </td> 
+        // <td> <img height="200" width="200" src="${data.drinks[i].strDrinkThumb}"</img></td>
+        // <td><button class='detail-button btn modal-trigger' data-target="modal1" name='${data.drinks[i].idDrink}'>Instructions</button></td>`;
+
+        tableRow.innerHTML = `<td> <img height="200" width="200" src="${data.drinks[i].strDrinkThumb}"</img> <br> 
+        <h4> ${data.drinks[i].strDrink}</h4><br>
+        <button class='detail-button btn modal-trigger' data-target="modal1" name='${data.drinks[i].idDrink}'>Instructions</button> </td> `;
         
         // write the above information into the actual page
         drinkTable.append(tableRow);
@@ -61,6 +65,7 @@ $(document).on('click', '.detail-button', getDrinkDetailApi);
 
 // this function takes the drink selection from a button, and gathers that drink's details from the API
 function getDrinkDetailApi(e){
+  modalText.innerHTML="";
   var requestUrl = 'https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i=' + e.target.name;
 
   fetch(requestUrl)
@@ -69,8 +74,12 @@ function getDrinkDetailApi(e){
     })
     .then(function (data) {
       console.log(data);
-      console.log(data.drinks[0].strInstructions);
-      modalText.append(data.drinks[0].strInstructions);
+      console.log(data.drinks[0].strInstructions);    
       
+      modalText.append(data.drinks[0].strInstructions);      
     })
 }
+
+// $(document).on('click', '#userDoneWithInstructionsButton', function(){
+//   modalText.remove();
+// })

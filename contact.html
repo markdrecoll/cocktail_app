@@ -29,16 +29,50 @@
   <body class="grey lighten-3">
 
     <!-- materialize nav bar -->
-    <nav>
-      <div class="nav-wrapper grey darken-2">
-        <a href="index.html" class="brand-logo"><img height="60px" width="60px" src="assets/images/drinkUpp_logo.png" alt="drinkUpp Logo"></img></a>
-        <ul id="nav-mobile" class="right">
-          <li><a href="ingredient.html">Search By Ingredient</a></li>
-          <li><a href="random.html">Random Drinks</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </nav>
+  <nav>
+    <div class="nav-wrapper grey darken-2">
+      <a href="index.html" class="brand-logo right"><img height="60px" width="60px" src="assets/images/drinkUpp_logo.png"
+          alt="drinkUpp Logo"></img></a>
+      <ul id="nav-mobile" class="left">
+        <li><a href="ingredient.html">Search By Ingredient</a></li>
+        <li><a href="random.html">Random Drinks</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="col m10 offset-m1 s12">
+            <h2 class="center-align">Contact Form</h2>
+            <div class="row">
+                <form class="col m8 offset-m2 s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="name" type="text">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="form-input">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field col s12">
+                          <textarea id="message" class="materialize-textarea"></textarea>
+                          <label for="message">Message</label>
+                        </div>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    <div class="row">
+                        <div class="col m12">
+                         <p class="right-align"><button class="btn btn-large waves-effect waves-light" type="button" name="action">Send Message</button></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>

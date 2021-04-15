@@ -19,14 +19,14 @@ function getApi() {
         <img alt="drink_image" height="200px" width="200px" src="${data.drinks[i].strDrinkThumb}"></img><br>
         Glass: ${data.drinks[i].strGlass} <br>
         Category: ${data.drinks[i].strCategory}<br>
-        ${data.drinks[i].strInstructions}<br><br>`);
+        <p class="instructionParagraphs">${data.drinks[i].strInstructions}</p><br><br>`);
       }
       for(var i=data.drinks.length/2;i<data.drinks.length; i++){
         randomDrinkDisplay02El.innerHTML += (`<h5>${data.drinks[i].strDrink}</h5>
         <img alt="drink_image" height="200px" width="200px" src="${data.drinks[i].strDrinkThumb}"></img><br>
         Glass: ${data.drinks[i].strGlass} <br>
         Category: ${data.drinks[i].strCategory}<br>
-        ${data.drinks[i].strInstructions}<br><br>`);
+        <p class="instructionParagraphs">${data.drinks[i].strInstructions}</p><br><br>`);
       }    
     })
 };

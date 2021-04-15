@@ -21,3 +21,8 @@ h4 {
     vertical-align: middle!important;
     margin: auto !important;
 }
+
+.instructionParagraphs{
+    max-width:60%;
+    margin:auto;
+}

@@ -41,4 +41,5 @@ $(document).on('click', '#ingredientButton', function(){
 // button that takes drink id and gives more details
 $(document).on('click', '.detail-button' ,function() {
   console.log('Time to get details for this id', $(this).attr('name'));
+  
 })

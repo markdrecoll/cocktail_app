@@ -1,4 +1,4 @@
-# cocktail_app
+## drinkUpp
 
 Mark Drecoll, Harrison Blackburn, and Solomon Laude
 
@@ -6,7 +6,7 @@ Mark Drecoll, Harrison Blackburn, and Solomon Laude
 
 DrinkUpp
 
-DrinkUpp is an application where users can get different information for cocktails. The main feature is that a user can type in an ingredient and see all the drinks that contain that ingredient.
+DrinkUpp is an app where users can get different information for cocktails. The main feature is that a user can type in an ingredient and see all the drinks that contain that ingredient.
 
 Our user story is that a person has a particular ingredient and would like to know what drinks they could make with it. They can type in mint and will be presented with drinks such as a mint julip or a mojito. Then the user is provided buttons to provide information on how to make the drink. Another feature we included was the ability to be presented with a page of random drinks. Our motivation for developing this app was to create a fun application a user could enjoy. If the application proved to become popular and spread, ads and premium features users pay for could be added to generate revenue. 
 

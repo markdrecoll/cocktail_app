@@ -20,6 +20,6 @@ In the end our success was that we were able to create a program that did exactl
 In the future if we were to develop this application further, we would create it in an app environment so people could use it on their phone. We would make it so that users can enter multiple ingredients, and only be displayed drinks that have all the ingredients they want to use. We would also add more features that might provide the user additional entertainment. 
 
 
-URL: https://markdrecoll.github.io/cocktail_app/
+URL: https://markdrecoll.github.io/drinkUpp/
 
-Github: https://github.com/markdrecoll/cocktail_app
+Github: https://github.com/markdrecoll/drinkUpp

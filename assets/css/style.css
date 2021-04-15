@@ -1,0 +1,25 @@
+#userInputDiv{
+
+    display:flex;
+    justify-content: center;
+    width: 50%;
+}
+
+td, th{
+    padding: 15px 5px !important;
+    display: table-cell !important;
+    text-align: center !important;
+    vertical-align: middle!important;
+    border-radius: 2px !important;
+}
+
+h4 {
+    display: inline-block !important;
+}
+
+#userInputDiv{
+    text-align: center !important;
+    vertical-align: middle!important;
+    margin: auto !important;
+
+}

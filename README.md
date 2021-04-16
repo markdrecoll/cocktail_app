@@ -1,4 +1,3 @@
-![drinkUppScreenShot](https://user-images.githubusercontent.com/77694281/115055071-9cf51800-9ea6-11eb-8fdf-b33d558e57f6.PNG)
 ## drinkUpp
 
 Mark Drecoll, Harrison Blackburn, and Solomon Laude
@@ -24,3 +23,6 @@ In the future if we were to develop this application further, we would create it
 URL: https://markdrecoll.github.io/drinkUpp/
 
 Github: https://github.com/markdrecoll/drinkUpp
+
+![drinkUppScreenShot](https://user-images.githubusercontent.com/77694281/115055113-ae3e2480-9ea6-11eb-9002-01d9cac81dd7.PNG)
+

@@ -1,3 +1,4 @@
+![drinkUppScreenShot](https://user-images.githubusercontent.com/77694281/115055071-9cf51800-9ea6-11eb-8fdf-b33d558e57f6.PNG)
 ## drinkUpp
 
 Mark Drecoll, Harrison Blackburn, and Solomon Laude

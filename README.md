@@ -1,6 +1,8 @@
 ## drinkUpp
 
-Mark Drecoll, Harrison Blackburn, and Solomon Laude
+Live Demo: https://markdrecoll.github.io/drinkUpp/
+
+Mark Drecoll
 
 4/12/21
 
@@ -19,10 +21,6 @@ The roles we assigned were based on our team members’ particular strengths. So
 In the end our success was that we were able to create a program that did exactly what we intended it to do. When the program is used, a user types in an ingredient and are displayed a list of cocktails to make. We completed our tasks ahead of schedule and were able to utilize our extra time to add additional functionality. 
 In the future if we were to develop this application further, we would create it in an app environment so people could use it on their phone. We would make it so that users can enter multiple ingredients, and only be displayed drinks that have all the ingredients they want to use. We would also add more features that might provide the user additional entertainment. 
 
-
-URL: https://markdrecoll.github.io/drinkUpp/
-
-Github: https://github.com/markdrecoll/drinkUpp
 
 ![drinkUppScreenShot](https://user-images.githubusercontent.com/77694281/115055113-ae3e2480-9ea6-11eb-9002-01d9cac81dd7.PNG)
 

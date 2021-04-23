@@ -59,24 +59,29 @@ function getDrinkDetailApi(e){
       return response.json();
     })
     .then(function (data) {
+      // sends data to console for testing purposes
       console.log(data);
       console.log(data.drinks[0].strInstructions);
 
-
-      // NEW IGNREDIENT ATTEMPT
+      // the api has the data as "strIngredient1" etc so
+      // we make placeholder text here and add the number
+      // of the current ingredient/measurement
       const ingredient_string = 'strIngredient';
       const measure_string = 'strMeasure'
       let drinkIngredients = [];
       let drinkMeasurements = [];
-      
 
+      // for loop that cycles through the data and returns
+      // every ingredient/measurement
       for(var i=1; i<= 15; i++){
         var ingredientTemp = ingredient_string;
         var measurementTemp= measure_string;
 
+        // makes the string "strIngredent" then whatever number you are on
         ingredientTemp+=i;
         measurementTemp+=i;
 
+        // when the
         if(data.drinks[0][ingredientTemp] !== null){
           drinkIngredients.push(data.drinks[0][ingredientTemp]);
         }
@@ -85,18 +90,15 @@ function getDrinkDetailApi(e){
         }
       }
 
-      //this works and prints every ingredient and measurement
-
-      // console.log(drinkIngredients);
-      // console.log(drinkMeasurements);
-
-      // i am trying to 
-
-      // for loop to append ingredient and measurements
+      // for loop to append ingredients and measurements to the modal
       for(var i=0; i < drinkIngredients.length; i++){
-        modalText.append(drinkMeasurements[i] + " " + drinkIngredients[i] +"<br>");
+        // modalText.append(drinkMeasurements[i] + " " + drinkIngredients[i] +"<br><br><br><br>\n");
         console.log(drinkIngredients[i]);
-      }      
+
+        let modalIngredientEl = document.createElement('p');
+
+        modalIngredientEl.innerHTML.appendChild(`${drinkMeasurements[i]} ${drinkIngredients}<br>`)
+      }
       
       // appends the instructions for the drink to the modal
       modalText.append('\n\n\n\tInstructions: ' + data.drinks[0].strInstructions);

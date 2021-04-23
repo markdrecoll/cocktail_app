@@ -93,13 +93,12 @@ function getDrinkDetailApi(e){
       // i am trying to 
 
       // for loop to append ingredient and measurements
-      for(var i=0; i < drinkIngredients; i++){
-        modalText.append(drinkMeasurements[i] + " " + drinkIngredients[i] +"<br>\n");
+      for(var i=0; i < drinkIngredients.length; i++){
+        modalText.append(drinkMeasurements[i] + " " + drinkIngredients[i] +"<br>");
         console.log(drinkIngredients[i]);
       }      
       
       // appends the instructions for the drink to the modal
-      modalText.append(drinkMeasurements + " " + drinkIngredients +"<br>\n");
-      modalText.append(data.drinks[0].strInstructions);
+      modalText.append('\n\n\n\tInstructions: ' + data.drinks[0].strInstructions);
     })
 }

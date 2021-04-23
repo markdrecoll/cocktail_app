@@ -1,9 +1,4 @@
-//Here to line 9 triggers the modal with javascript
-// document.addEventListener('DOMContentLoaded', function() {
-//   var elems = document.querySelectorAll('.modal');
-//   var instances = M.Modal.init(elems, options);
-// });
-// Or with jQuery
+// setup modal in jQuery
 $(document).ready(function(){
   $('.modal').modal();
 });
@@ -47,6 +42,7 @@ function getApi(searchTerm) {
 // calls the function to get information from the API when the user clicks the button
 $(document).on('click', '#ingredientButton', function(){
   var userInputIngredientEl = document.getElementById('userInputIngredient').value;
+  $('#drinkTable').empty();
   getApi(userInputIngredientEl);
 })
 
@@ -65,8 +61,45 @@ function getDrinkDetailApi(e){
     .then(function (data) {
       console.log(data);
       console.log(data.drinks[0].strInstructions);
+
+
+      // NEW IGNREDIENT ATTEMPT
+      const ingredient_string = 'strIngredient';
+      const measure_string = 'strMeasure'
+      let drinkIngredients = [];
+      let drinkMeasurements = [];
+      
+
+      for(var i=1; i<= 15; i++){
+        var ingredientTemp = ingredient_string;
+        var measurementTemp= measure_string;
+
+        ingredientTemp+=i;
+        measurementTemp+=i;
+
+        if(data.drinks[0][ingredientTemp] !== null){
+          drinkIngredients.push(data.drinks[0][ingredientTemp]);
+        }
+        if(data.drinks[0][measurementTemp] !== null){
+          drinkMeasurements.push(data.drinks[0][measurementTemp]);
+        }
+      }
+
+      //this works and prints every ingredient and measurement
+
+      // console.log(drinkIngredients);
+      // console.log(drinkMeasurements);
+
+      // i am trying to 
+
+      // for loop to append ingredient and measurements
+      for(var i=0; i < drinkIngredients; i++){
+        modalText.append(drinkMeasurements[i] + " " + drinkIngredients[i] +"<br>\n");
+        console.log(drinkIngredients[i]);
+      }      
       
       // appends the instructions for the drink to the modal
-      modalText.append(data.drinks[0].strInstructions);      
+      modalText.append(drinkMeasurements + " " + drinkIngredients +"<br>\n");
+      modalText.append(data.drinks[0].strInstructions);
     })
 }

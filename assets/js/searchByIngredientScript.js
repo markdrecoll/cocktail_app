@@ -92,13 +92,12 @@ function getDrinkDetailApi(e){
 
       // for loop to append ingredients and measurements to the modal
       for(var i=0; i < drinkIngredients.length; i++){
-        // modalText.append(drinkMeasurements[i] + " " + drinkIngredients[i] +"<br><br><br><br>\n");
+        
         console.log(drinkIngredients[i]);
 
         let modalIngredientEl = document.createElement('p');
-
-
-        modalIngredientEl.innerHTML(`${drinkMeasurements[i]} ${drinkIngredients}<br>`)
+        modalIngredientEl.innerHTML = (`${drinkMeasurements[i]} ${drinkIngredients[i]}<br>`)
+        modalText.append(modalIngredientEl);
       }
       
       // appends the instructions for the drink to the modal

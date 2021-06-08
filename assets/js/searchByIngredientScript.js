@@ -19,11 +19,8 @@ function getApi(searchTerm) {
     })
     .then(function (data) {
 
-      ///////////////////
-      // doesn't work
-      //////////////////
-
-      if(data.drinks[0].strDrink !== "undefined"){
+      // data.drinks comes in as an array if it is found, so only create the table if it is an array
+      if(Array.isArray(data.drinks)){
 
           var tableRow = document.createElement('tr');
 
@@ -41,6 +38,8 @@ function getApi(searchTerm) {
             // write the above information into the actual page
             drinkTable.append(tableRow);
         }
+      }else {
+        alert('No such ingredient found.')
       }
     }
 )};

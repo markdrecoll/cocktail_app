@@ -18,23 +18,29 @@ function getApi(searchTerm) {
       return response.json();
     })
     .then(function (data) {
-      //Using console.log to examine the data
-      console.log(data);
-    var tableRow = document.createElement('tr');
 
-    // displays however many drinks is meant to be displayed
-      for (var i = 0; i<data.drinks.length; i ++){
+      ///////////////////
+      // doesn't work
+      //////////////////
 
-        // create variable for pushing in a table row
-        var tableRow = document.createElement('tr');
+      if(data.drinks[0].strDrink !== "undefined"){
 
-        // Displays drinks on the page button makes a modal
-        tableRow.innerHTML = `<td> <img height="200" width="200" src="${data.drinks[i].strDrinkThumb}"</img> <br> 
-        <h4> ${data.drinks[i].strDrink}</h4><br>
-        <button class='detail-button btn modal-trigger' data-target="modal1" name='${data.drinks[i].idDrink}'>Instructions</button> </td> `;
-        
-        // write the above information into the actual page
-        drinkTable.append(tableRow);
+          var tableRow = document.createElement('tr');
+
+          // displays however many drinks is meant to be displayed
+          for (var i = 0; i<data.drinks.length; i ++){
+
+            // create variable for pushing in a table row
+            var tableRow = document.createElement('tr');
+
+            // Displays drinks on the page button makes a modal
+            tableRow.innerHTML = `<td> <img height="200" width="200" src="${data.drinks[i].strDrinkThumb}"</img> <br> 
+            <h4> ${data.drinks[i].strDrink}</h4><br>
+            <button class='detail-button btn modal-trigger' data-target="modal1" name='${data.drinks[i].idDrink}'>Instructions</button> </td> `;
+            
+            // write the above information into the actual page
+            drinkTable.append(tableRow);
+        }
       }
     }
 )};
@@ -59,10 +65,6 @@ function getDrinkDetailApi(e){
       return response.json();
     })
     .then(function (data) {
-      // sends data to console for testing purposes
-      console.log(data);
-      console.log(data.drinks[0].strInstructions);
-
       // the api has the data as "strIngredient1" etc so
       // we make placeholder text here and add the number
       // of the current ingredient/measurement
@@ -92,9 +94,6 @@ function getDrinkDetailApi(e){
 
       // for loop to append ingredients and measurements to the modal
       for(var i=0; i < drinkIngredients.length; i++){
-        
-        console.log(drinkIngredients[i]);
-
         let modalIngredientEl = document.createElement('p');
         modalIngredientEl.innerHTML = (`${drinkMeasurements[i]} ${drinkIngredients[i]}`)
         modalText.append(modalIngredientEl);

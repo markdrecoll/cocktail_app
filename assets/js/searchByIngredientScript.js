@@ -81,7 +81,7 @@ function getDrinkDetailApi(e){
         ingredientTemp+=i;
         measurementTemp+=i;
 
-        // when the
+        // if there is no ingredient/measurement then dont read in the data
         if(data.drinks[0][ingredientTemp] !== null){
           drinkIngredients.push(data.drinks[0][ingredientTemp]);
         }

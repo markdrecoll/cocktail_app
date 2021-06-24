@@ -16,10 +16,7 @@ function getApi() {
         randomDrinkDisplay01El.innerHTML += (`<h5>${data.drinks[i].strDrink}</h5>
         <img alt="drink_image" height="200px" width="200px" src="${data.drinks[i].strDrinkThumb}"></img><br>
         Glass: ${data.drinks[i].strGlass} <br>
-        Category: ${data.drinks[i].strCategory}<br>
-        <p class="instructionParagraphs">${data.drinks[i].strInstructions}</p><br><br>`);
-      
-
+        Category: ${data.drinks[i].strCategory}<br>`);
 
       // the api has the data as "strIngredient1" etc so
       // we make placeholder text here and add the number
@@ -50,9 +47,11 @@ function getApi() {
 
       // for loop to append ingredients and measurements
       for(var k=0; k < drinkIngredients.length; k++){
-
-        randomDrinkDisplay01El.innerHTML += (`<p>${drinkMeasurements[k]} ${drinkIngredients[k]}</p>`)
+        randomDrinkDisplay01El.innerHTML += (`<p>${drinkMeasurements[k]} ${drinkIngredients[k]}</p>`);
       }
+
+      randomDrinkDisplay01El.innerHTML += (`<p class="instructionParagraphs">${data.drinks[i].strInstructions}</p><br><br></br>`);
+
     }
       
 

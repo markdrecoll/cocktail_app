@@ -53,7 +53,7 @@ function getApi() {
           randomDrinkDisplay01El.innerHTML += (`<p>${drinkMeasurements[k]} ${drinkIngredients[k]}</p>`);
         }
 
-        randomDrinkDisplay01El.innerHTML += (`<p class="instructionParagraphs">${data.drinks[i].strInstructions}</p><br><br></br>`);
+        randomDrinkDisplay01El.innerHTML += (`<p class="instructionParagraphs">${data.drinks[i].strInstructions}</p><br></br>`);
       }
 
       for (var o = data.drinks.length / 2; o < data.drinks.length; o++) {
@@ -97,7 +97,7 @@ function getApi() {
           randomDrinkDisplay02El.innerHTML += (`<p>${drinkMeasurements[l]} ${drinkIngredients[l]}</p>`);
         }
 
-        randomDrinkDisplay02El.innerHTML += (`<p class="instructionParagraphs">${data.drinks[o].strInstructions}</p><br></br>`);
+        randomDrinkDisplay02El.innerHTML += (`<p class="instructionParagraphs">${data.drinks[o].strInstructions}</p><br><br>`);
       }
     })
 }

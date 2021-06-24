@@ -40,7 +40,10 @@ function getApi() {
           if (data.drinks[i][ingredientTemp] !== null) {
             drinkIngredients.push(data.drinks[i][ingredientTemp]);
           }
-          if (data.drinks[i][measurementTemp] !== null) {
+          // sometimes the ingredient has no measurement, this else if only puts a measurement if it is there
+          if (data.drinks[i][measurementTemp] == null && data.drinks[i][ingredientTemp] !== null) {
+            drinkMeasurements.push('');
+          }else if(data.drinks[i][measurementTemp] !== null && data.drinks[i][ingredientTemp] !== null){
             drinkMeasurements.push(data.drinks[i][measurementTemp]);
           }
         }
@@ -81,7 +84,10 @@ function getApi() {
           if (data.drinks[o][ingredientTemp] !== null) {
             drinkIngredients.push(data.drinks[o][ingredientTemp]);
           }
-          if (data.drinks[o][measurementTemp] !== null) {
+          // sometimes the ingredient has no measurement, this else if only puts a measurement if it is there
+          if (data.drinks[o][measurementTemp] == null && data.drinks[o][ingredientTemp] !== null) {
+            drinkMeasurements.push('');
+          }else if(data.drinks[o][measurementTemp] !== null && data.drinks[o][ingredientTemp] !== null){
             drinkMeasurements.push(data.drinks[o][measurementTemp]);
           }
         }

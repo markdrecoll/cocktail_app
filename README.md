@@ -11,4 +11,5 @@ DrinkUpp is an application where users can get different information for cocktai
 ## Questions
 Email: mark@markdrecoll.com
 ## Screenshot
-<img src="https://user-images.githubusercontent.com/77694281/121949842-90faca80-cd1e-11eb-83b1-279cf9fb3cde.PNG" width="300px" height="300px">
+![drinkupp_screenshot01](https://user-images.githubusercontent.com/77694281/125535885-30687ba3-d8da-45c9-a4fc-93b566e5ffcd.PNG)
+
